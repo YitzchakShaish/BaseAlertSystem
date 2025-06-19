@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace BaseAlertSystem
 {
-    internal class SirenAlert: IAlert
+    internal interface IAlert
     {
-        public void Alert()
-        {
-            Console.WriteLine("Alarm sound goes up and down");
-        }
+        void Alert();
     }
 }

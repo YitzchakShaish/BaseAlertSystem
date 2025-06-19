@@ -10,6 +10,15 @@ namespace BaseAlertSystem
     {
         static void Main(string[] args)
         {
+            IAlert alert = new SirenAlert();
+            BaseDefenseController bdc = new BaseDefenseController(alert);
+            bdc.DetectThreat();
+            IAlert alert2 = new DroneDispatchAlert();
+            BaseDefenseController bdc2 = new BaseDefenseController(alert2);
+            bdc2.DetectThreat();
+
+
+
         }
     }
 }

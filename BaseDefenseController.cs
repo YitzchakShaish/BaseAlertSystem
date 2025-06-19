@@ -8,8 +8,13 @@ namespace BaseAlertSystem
 {
     internal class BaseDefenseController
     {
-        private SirenAlert alert = new SirenAlert();
+        private IAlert alert ;
 
+
+        public BaseDefenseController(IAlert alert)
+        {
+            this.alert = alert;
+        }
         public void DetectThreat()
         {
             Console.WriteLine("Alarm activation");
